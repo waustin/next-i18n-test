@@ -1,14 +1,9 @@
 .container {
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .main {
   padding: 4rem 6vw;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .footer {
@@ -36,4 +31,22 @@
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1rem;
+}
+
+.langNav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  padding: 1rem 6vw;
+  border-bottom: 1px solid #EEE;
+
+}
+.langNav a {
+  display: inline-block;
+  border: 1px solid #666;
+  color: #333;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
 }

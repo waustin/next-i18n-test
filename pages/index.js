@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
@@ -16,8 +17,19 @@ export default function Home() {
         <title>Multi-Lingual Test Application</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      <nav className={styles.langNav}>
+        <Link href="/" locale="en">
+          <a>English</a>
+        </Link>
+        <Link href="/" locale="es">
+          <a>Español</a>
+        </Link>
+      </nav>
 
       <main className={styles.main}>
+      
+
         <h1 className={styles.title}>
           This application has text that can be translated
         </h1>
