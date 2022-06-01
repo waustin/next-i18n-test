@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 
 export default function Home() {
-  const { t }  = useTranslation('footer');
+  const { t }  = useTranslation();
 
   return (
     <div className={styles.container}>
@@ -26,9 +26,10 @@ export default function Home() {
          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
         </p>
 
+        <a className="button" href="#">{t('Next')}</a>
        
       </main>
-      
+
       <Footer />
     </div>
   )
@@ -37,7 +38,7 @@ export default function Home() {
 export async function getStaticProps({locale}) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['footer'])),
+      ...(await serverSideTranslations(locale, ['common', 'footer'])),
       // will be passed to page component as props
     }
   }
