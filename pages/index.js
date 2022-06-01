@@ -31,7 +31,7 @@ export default function Home() {
       
 
         <h1 className={styles.title}>
-          This application has text that can be translated
+          {t('This application has text that can be translated')}
         </h1>
 
         <p className={styles.description}>
