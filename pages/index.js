@@ -1,8 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
+
 import styles from '../styles/Home.module.css'
 
+
+
 export default function Home() {
+  const { t }  = useTranslation('footer');
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,8 +29,17 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-       Footer Text
+       { t('Footer Text') }
       </footer>
     </div>
   )
+}
+
+export async function getStaticProps({locale}) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['footer'])),
+      // will be passed to page component as props
+    }
+  }
 }
