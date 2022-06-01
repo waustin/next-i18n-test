@@ -1,7 +1,11 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useTranslation } from 'next-i18next';
+// import Link from 'next/link'
+
+import {
+  useTranslation,
+  useLanguageQuery,
+  LanguageSwitcher,
+} from "next-export-i18n";
 
 import styles from '../styles/Home.module.css'
 import Footer from '../components/Footer';
@@ -10,6 +14,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   const { t }  = useTranslation();
+  const [query] = useLanguageQuery();
 
   return (
     <div className={styles.container}>
@@ -19,12 +24,12 @@ export default function Home() {
       </Head>
       
       <nav className={styles.langNav}>
-        <Link href="/" locale="en">
+       <LanguageSwitcher lang="en">
           <a>English</a>
-        </Link>
-        <Link href="/" locale="es">
-          <a>Español</a>
-        </Link>
+        </LanguageSwitcher>
+       <LanguageSwitcher lang="es">
+         <a>Español</a> 
+       </LanguageSwitcher>
       </nav>
 
       <main className={styles.main}>
@@ -45,13 +50,4 @@ export default function Home() {
       <Footer />
     </div>
   )
-}
-
-export async function getStaticProps({locale}) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common', 'footer'])),
-      // will be passed to page component as props
-    }
-  }
 }
