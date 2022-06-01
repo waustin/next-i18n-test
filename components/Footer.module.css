@@ -1,0 +1,9 @@
+.main-footer {
+  padding: 40px 6vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: #EDDFDA;
+  color: #434;
+}

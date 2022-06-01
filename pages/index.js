@@ -3,6 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
 import styles from '../styles/Home.module.css'
+import Footer from '../components/Footer';
 
 
 
@@ -27,10 +28,8 @@ export default function Home() {
 
        
       </main>
-
-      <footer className={styles.footer}>
-       { t('Footer Text') }
-      </footer>
+      
+      <Footer />
     </div>
   )
 }
