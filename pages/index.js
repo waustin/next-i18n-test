@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="page">
       <Head>
-        <title>Multi-Lingual Test Application</title>
+        <title>Multi-Lingual Test Application - Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className={styles.title}>
