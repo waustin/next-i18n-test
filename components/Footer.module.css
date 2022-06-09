@@ -7,3 +7,13 @@
   background-color: #EDDFDA;
   color: #434;
 }
+.link {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+
+.p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
