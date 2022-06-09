@@ -2,7 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   pwa: {
-    dest: 'public'
+    dest: 'public',
+    register: true,
+    skipWaiting: true,
   }
 }
 
