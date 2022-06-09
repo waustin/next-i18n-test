@@ -1,0 +1,31 @@
+.header {
+  padding: 1rem 6vw;
+  border-bottom: 1px solid #EEE;
+  display: flex;
+  background-color: #F2FFF7;
+  align-items: center;
+}
+.mainNav {
+  display: flex;
+  flex-grow: 1;
+}
+.mainNav a {
+  padding: 0.5rem 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.langNav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+.langNav a {
+  display: inline-block;
+  border: 1px solid #666;
+  color: #333;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
