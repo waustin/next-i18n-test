@@ -1,13 +1,7 @@
 
 {
   "name": "Background Test",
-  "short_name": "bgTest",
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
-  "display": "standalone",
-  "start_url": "/",
-  "orientation": "portrait",
-  "description": "A test PWA",
+  "short_name": "bg test",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
@@ -29,5 +23,10 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait"
 }
