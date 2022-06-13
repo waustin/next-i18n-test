@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import * as ga from '../lib/ga';
 
 import Layout from '../components/Layout';
+import 'normalize.css';
 import '../styles/globals.css'
 
 

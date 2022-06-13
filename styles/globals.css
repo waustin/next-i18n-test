@@ -14,7 +14,12 @@ a {
 * {
   box-sizing: border-box;
 }
-
+button {
+  border: 0;
+}
+.button:hover {
+  cursor: pointer;
+}
 .button {
   background-color: blue;
   color: white;

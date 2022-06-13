@@ -1,5 +1,6 @@
+import React, {useState} from 'react';
 import Head from 'next/head'
-// import Link from 'next/link'
+import * as ga from '../lib/ga';
 
 import {
   useTranslation,
@@ -11,6 +12,18 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   const { t }  = useTranslation();
   const [query] = useLanguageQuery();
+
+  const [count, setCount] = useState(0);
+
+  function buttonClick(e) {
+    ga.event({
+      action: 'buttonClick',
+      params: {
+        'count': count
+      }
+    });
+    setCount(count + 1);
+  }
 
   return (
     <div className="page">
@@ -25,8 +38,10 @@ export default function Home() {
       <p className={styles.description}>
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
       </p>
-
-      <a className="button" href="#">{t('Next')}</a>
+      <p>
+        <strong>Button Clicked:</strong> {count}
+      </p>
+      <button className="button" type="buttion" onClick={buttonClick}>Click Me</button>
     </div>
   )
 }
